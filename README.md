@@ -18,7 +18,7 @@ A implementação principal está em Java puro, com um analisador léxico e sint
 ```text
 .
 ├── Makefile
-├── Parser.java
+├── SemanticParser.java
 ├── Lexer.java
 ├── Token.java
 ├── TokenType.java
@@ -54,7 +54,7 @@ Esse comando compila todos os arquivos Java necessários para executar o analisa
 ## Como executar um programa MiniJava
 
 ```bash
-java Parser testes/01-correto-basico.mjava
+java SemanticParser testes/01-correto-basico.mjava
 ```
 
 Quando o programa é aceito, o analisador imprime a tabela de símbolos e finaliza com código `0`.
@@ -222,3 +222,5 @@ public static void main(String[] args)
 A pasta `gramatica/` contém uma versão adaptada dos arquivos `miniJava.y` e `lexico.flex`, baseada na gramática inicial fornecida pelo professor. Esses arquivos documentam a gramática considerada, incluindo a remoção do tratamento de arrays e a inclusão de `extends`.
 
 A versão executável deste repositório usa as classes Java diretamente, para facilitar a compilação e execução dos testes com `javac`, sem depender da instalação local de `jflex` e `byaccj`.
+
+O arquivo gerado pelo BYACC/J normalmente se chama `Parser.java`. Por isso, a implementação executável deste repositório usa o nome `SemanticParser.java`, evitando conflito caso `byaccj -J gramatica/miniJava.y` seja executado.
