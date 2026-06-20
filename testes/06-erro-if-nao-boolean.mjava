@@ -1,0 +1,17 @@
+class A {
+    public int f() {
+        int x;
+        x = 1;
+        if (x)
+            x = 2;
+        else
+            x = 3;
+        return x;
+    }
+}
+
+class App {
+    public static void main(String[] args) {
+        System.out.println(new A().f());
+    }
+}
