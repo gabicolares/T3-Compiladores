@@ -9,7 +9,7 @@ run_case() {
   local expected="$2"
   echo "==> $file [$expected]"
 
-  if java Parser "$file" > /tmp/t3_comp_stdout.txt 2> /tmp/t3_comp_stderr.txt; then
+  if java SemanticParser "$file" > /tmp/t3_comp_stdout.txt 2> /tmp/t3_comp_stderr.txt; then
     status=0
   else
     status=$?
