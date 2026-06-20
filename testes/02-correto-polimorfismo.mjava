@@ -1,0 +1,29 @@
+class Animal {
+    public int idade() {
+        return 3;
+    }
+}
+
+class Cachorro extends Animal {
+    public int late() {
+        return 1;
+    }
+}
+
+class Abrigo {
+    public int recebeAnimal(Animal a) {
+        return a.idade();
+    }
+}
+
+class App {
+    public static void main(String[] args) {
+        Animal a;
+        Cachorro c;
+        Abrigo abrigo;
+        c = new Cachorro();
+        a = c;
+        abrigo = new Abrigo();
+        System.out.println(abrigo.recebeAnimal(c));
+    }
+}
