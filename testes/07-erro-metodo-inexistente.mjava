@@ -1,0 +1,11 @@
+class A {
+    public int f() {
+        return 1;
+    }
+}
+
+class App {
+    public static void main(String[] args) {
+        System.out.println(new A().g());
+    }
+}
