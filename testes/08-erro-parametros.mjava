@@ -1,0 +1,11 @@
+class A {
+    public int soma(int x, int y) {
+        return x + y;
+    }
+}
+
+class App {
+    public static void main(String[] args) {
+        System.out.println(new A().soma(1, false));
+    }
+}
