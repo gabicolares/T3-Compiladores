@@ -1,0 +1,15 @@
+class A {
+    public int f() {
+        int x;
+        boolean b;
+        x = true;
+        b = 10;
+        return x;
+    }
+}
+
+class App {
+    public static void main(String[] args) {
+        System.out.println(new A().f());
+    }
+}
