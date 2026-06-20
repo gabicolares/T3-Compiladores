@@ -1,16 +1,16 @@
 JAVAC = javac
 JAVA = java
-SOURCES = TokenType.java Token.java Lexer.java TypeInfo.java ClasseID.java TS_entry.java TabSimb.java Parser.java
+SOURCES = TokenType.java Token.java Lexer.java TypeInfo.java ClasseID.java TS_entry.java TabSimb.java SemanticParser.java
 
-all: Parser.class
+all: SemanticParser.class
 
-Parser.class: $(SOURCES)
+SemanticParser.class: $(SOURCES)
 	$(JAVAC) $(SOURCES)
 
-run: Parser.class
-	$(JAVA) Parser
+run: SemanticParser.class
+	$(JAVA) SemanticParser
 
-test: Parser.class
+test: SemanticParser.class
 	bash run-tests.sh
 
 clean:
